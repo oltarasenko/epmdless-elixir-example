@@ -4,19 +4,6 @@ A tiny example, which demonstrates how to setup EPMDLess with TLS support for
 Elixir. Please note that certificates are provided for demonstration only
 purposes. Please generate own certificates for production.
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `epmdless_elixir_example` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:epmdless_elixir_example, "~> 0.1.0"}
-  ]
-end
-```
-
 ## Demo
 
  1. mix deps.get
