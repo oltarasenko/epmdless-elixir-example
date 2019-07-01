@@ -17,7 +17,7 @@ ERL_LIBS=_build/dev/lib/ EPMDLESS_DIST_PORT=17012 iex --cookie 123 --name "a@127
 And in terminal B do:
 
 ```
-ERL_LIBS=_build/dev/lib/ EPMDLESS_DIST_PORT=17011 iex --cookie 123 --name "b@127.0.0.1" --erl "-proto_dist epmdless_proto" --erl "-start_epmd false"  --erl "-epmd_module epmdless_client" -S mix
+ERL_LIBS=_build/dev/lib/ EPMDLESS_DIST_PORT=17013 iex --cookie 123 --name "b@127.0.0.1" --erl "-proto_dist epmdless_proto" --erl "-start_epmd false"  --erl "-epmd_module epmdless_client" -S mix
 ```
 
 Now after you have started two Elixir applications, you can connect them in the
