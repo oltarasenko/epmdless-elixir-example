@@ -4,19 +4,6 @@ A tiny example, which demonstrates how to setup EPMDLess with TLS support for
 Elixir. Please note that certificates are provided for demonstration only
 purposes. Please generate own certificates for production.
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `epmdless_elixir_example` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:epmdless_elixir_example, "~> 0.1.0"}
-  ]
-end
-```
-
 ## Demo
 
  1. mix deps.get
@@ -30,7 +17,7 @@ ERL_LIBS=_build/dev/lib/ EPMDLESS_DIST_PORT=17012 iex --cookie 123 --name "a@127
 And in terminal B do:
 
 ```
-ERL_LIBS=_build/dev/lib/ EPMDLESS_DIST_PORT=17011 iex --cookie 123 --name "b@127.0.0.1" --erl "-proto_dist epmdless_proto" --erl "-start_epmd false"  --erl "-epmd_module epmdless_client" -S mix
+ERL_LIBS=_build/dev/lib/ EPMDLESS_DIST_PORT=17013 iex --cookie 123 --name "b@127.0.0.1" --erl "-proto_dist epmdless_proto" --erl "-start_epmd false"  --erl "-epmd_module epmdless_client" -S mix
 ```
 
 Now after you have started two Elixir applications, you can connect them in the
