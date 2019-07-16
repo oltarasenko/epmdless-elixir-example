@@ -62,6 +62,30 @@ iex(a@127.0.0.1)3>
 
 That's all.
 
+## Using with releases
+Please check the configuration at vm.args. But technically after
+assembling the release with:
+
+`MIX_ENV=prod mix distillery.release`
+
+and running two nodes in the following way:
+`EPMDLESS_DIST_PORT=17013 REPLACE_OS_VARS=true NODE=a _build/prod/rel/epmdless_elixir_example/bin/epmdless_elixir_example console`
+
+and
+
+`EPMDLESS_DIST_PORT=17012 REPLACE_OS_VARS=true NODE=b _build/prod/rel/epmdless_elixir_example/bin/epmdless_elixir_example console`
+
+I was able to ping connect them together:
+```
+iex(a@127.0.0.1)1> :epmdless_dist.add_node(:'b@127.0.0.1', 17012)
+:ok
+iex(a@127.0.0.1)2> :net_adm.ping(:'b@127.0.0.1')
+:pong
+iex(a@127.0.0.1)3> Node.list
+[:"b@127.0.0.1"]
+```
+
+
 ## Note... unclear part
 
 Ot looks like it does not work without sys.config file written in Erlang style.

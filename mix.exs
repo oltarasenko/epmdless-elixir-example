@@ -22,7 +22,8 @@ defmodule EpmdlessElixirExample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:epmdless, "~> 0.1.4"}
+      {:epmdless, "~> 0.1.4"},
+      {:distillery, "~> 2.1"}
     ]
   end
 end
